@@ -1,2 +1,2 @@
-# Captain-Quack
+# Captain Quack
 Test work

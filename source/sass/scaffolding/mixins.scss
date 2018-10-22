@@ -1,0 +1,22 @@
+@mixin font($fweight: 300, $fsize: 12px, $lheight: 18px) {
+  font-weight: $fweight;
+  font-style: normal;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: $fsize;
+  line-height: $lheight;
+}
+
+@mixin list {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+@mixin margin-hor($mh: auto) {
+  margin-left: $mh;
+  margin-right: $mh;
+}
+
+@mixin padding-hor($ph: 10px) {
+  padding-left: $ph;
+  padding-right: $ph;
+}
