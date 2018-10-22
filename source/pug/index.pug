@@ -1,34 +1,93 @@
 doctype html
-html(lang='ru')
+html(lang="ru")
   head
-    meta(charset='utf-8')
+    meta(charset="utf-8")
     title Captain Quack
-    meta(
-      name='viewport'
-      content='width=device-width, initial-scale=1'
-    )
-    meta(
-      name='format-detection'
-      content='telephone=no'
-    )
-    link(
-      rel='preload'
-      href='fonts/roboto-light.woff2'
-      as='font'
-    )
-    link(
-      rel='preload'
-      href='fonts/roboto-regular.woff2'
-      as='font'
-    )
-    link(
-      rel='preload'
-      href='fonts/roboto-medium.woff2'
-      as='font'
-    )
-    link(
-      rel='preload'
-      href='fonts/roboto-bold.woff2'
-      as='font'
-    )
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="format-detection" content="telephone=no")
+    link(rel="preload" href="fonts/roboto-light.woff2" as="font")
+    link(rel="preload" href="fonts/roboto-regular.woff2" as="font")
+    link(rel="preload" href="fonts/roboto-medium.woff2" as="font")
+    link(rel="preload" href="fonts/roboto-bold.woff2" as="font")
   body
+    header(class="page-header")
+      div(class="page-header__wrapper  aligner")
+        picture
+          source(
+            media="(min-width: 720px)",
+            srcset="img/logo-large.png"
+          )
+          img(
+            class="page-header__logo"
+            src="img/logo-small.png"
+            alt="Captain Quack"
+          )
+
+    main(class="page-main")
+      header(class="page-main__intro  aligner")
+        h1(class="page-main__title  visually-hidden") Каталог
+        p(class="page-main__lead") ¡Ay caramba!
+
+      section(class="page-main__filter  filter")
+        h2(class="filter__title  visually-hidden")
+        form(class="filter__form  aligner")
+
+          div(class="filter__item  filter__item--title")
+            label(class="filter__label  filter__label--text" for="title") Название
+            input(class="filter__field  filter__field--text" type="text" id="title" placeholder="Название")
+
+          div(class="filter__item  filter__item--price")
+            label(class="filter__label  filter__label--text" for="price") Цена
+            input(class="filter__field  filter__field--text" type="text" id="price" placeholder="Цена")
+
+          div(class="filter__item  filter__item--year")
+            label(class="filter__label  filter__label--text" for="year") Год
+            input(class="filter__field  filter__field--text" type="text" id="year" placeholder="Год")
+
+          div(class="filter__item  filter__item--description")
+            label(class="filter__label  filter__label--text" for="description") Описание
+            input(class="filter__field  filter__field--text" type="text" id="description" placeholder="Описание")
+
+          div(class="filter__item  filter__item--color")
+            span(class="filter__label  filter__label--color") Цвет
+            ul(class="filter__color-list  palette")
+              li(class="palette__item")
+                input(class="palette__field  palette__field--white" type="radio" name="color" value="white" id="white")
+                label(class="palette__label" for="white") Белый
+              li(class="palette__item")
+                input(class="palette__field  palette__field--black" type="radio" name="color" value="black" id="black")
+                label(class="palette__label" for="black") Чёрный
+              li(class="palette__item")
+                input(class="palette__field  palette__field--gray" type="radio" name="color" value="gray" id="gray")
+                label(class="palette__label" for="gray") Серый
+              li(class="palette__item")
+                input(class="palette__field  palette__field--crimson" type="radio" name="color" value="crimson" id="crimson")
+                label(class="palette__label" for="crimson") Малиновый
+              li(class="palette__item")
+                input(class="palette__field  palette__field--lime" type="radio" name="color" value="lime" id="lime")
+                label(class="palette__label" for="lime") Лайм
+
+          div(class="filter__item  filter__item--status  status-select")
+            p(class="status-select__tip") Статус
+            ul(class="status-select__list")
+              li(class="status-select__item")
+                input(class="status-select__field" type="radio" name="status" value="in-stock" id="in-stock")
+                label(class="status-select__label" for="in-stock") В наличии
+              li(class="status-select__item")
+                input(class="status-select__field" type="radio" name="status" value="pending" id="pending")
+                label(class="status-select__label" for="pending") Ожидается
+              li(class="status-select__item")
+                input(class="status-select__field" type="radio" name="status" value="not-available" id="not-available")
+                label(class="status-select__label" for="not-available") Нет в наличии
+
+          button(class="filter__item  filter__item--button  button  button--submit" type="submit")
+            span(class="button-fix") Отправить
+
+
+    footer(class="page-footer")
+      div(class="page-footer__wrapper  aligner")
+        div(class="page-footer__copyright  copyright")
+          span(class="copyright__heading") © 2015 Captain Quack
+          span(class="copyright__description") Десница тысячелетия и моллюск!
+
+    script(src="js/picturefill.min.js")

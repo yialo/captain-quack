@@ -48,5 +48,8 @@
     "pug-lint": "^2.5.0",
     "stylelint": "^9.6.0",
     "stylelint-config-htmlacademy": "^0.1.1"
+  },
+  "dependencies": {
+    "deep-extend": "^0.6.0"
   }
 }

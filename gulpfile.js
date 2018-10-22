@@ -6,6 +6,7 @@ var autoprefixer = require('autoprefixer');
 var browserSync = require('browser-sync').create();
 var del = require('del');
 var gulp = require('gulp');
+var cssmin = require('gulp-csso');
 var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
 var postcss = require('gulp-postcss');
@@ -39,8 +40,8 @@ var style = function () {
       autoprefixer()
     ]))
     .pipe(gulp.dest('./build/css/'))
-    .pipe(minify())
-    .pipe(remane('style.min.css'))
+    .pipe(cssmin())
+    .pipe(rename('style.min.css'))
     .pipe(gulp.dest('./build/css/'))
     .pipe(browserSync.stream());
 }

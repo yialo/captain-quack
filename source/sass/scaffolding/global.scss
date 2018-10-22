@@ -12,7 +12,7 @@ body {
   min-width: 360px;
 
   @include font;
-  color: $gray;
+  color: $gray-dark-text;
   background-color: white;
 }
 
