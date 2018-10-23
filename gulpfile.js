@@ -6,7 +6,8 @@ var autoprefixer = require('autoprefixer');
 var browserSync = require('browser-sync').create();
 var del = require('del');
 var gulp = require('gulp');
-var cssmin = require('gulp-csso');
+var mincss = require('gulp-csso');
+var minjs = require('gulp-uglify');
 var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
 var postcss = require('gulp-postcss');
@@ -20,14 +21,20 @@ var clean = function () {
   return del('build');
 }
 
-var html = function () {
-  return gulp.src('./source/pug/*.pug')
-    .pipe(plumber({
-      errorHandler: notify.onError()
-    }))
-    .pipe(pug())
-    .pipe(gulp.dest('./build/'))
-    .pipe(browserSync.stream());
+var fonts = function () {
+  return gulp.src('./source/fonts/*.{woff,woff2}')
+    .pipe(gulp.dest('./build/fonts'));
+}
+
+var images = function () {
+  return gulp.src('./source/img/*.{jpg,png,svg}')
+    .pipe(gulp.dest('./build/img/'));
+}
+
+var scripts = function () {
+  return gulp.src('./source/js/*.js')
+    .pipe(minjs())
+    .pipe(gulp.dest('./build/js/'));
 }
 
 var style = function () {
@@ -40,15 +47,20 @@ var style = function () {
       autoprefixer()
     ]))
     .pipe(gulp.dest('./build/css/'))
-    .pipe(cssmin())
+    .pipe(mincss())
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('./build/css/'))
     .pipe(browserSync.stream());
 }
 
-var images = function () {
-  return gulp.src('./source/img/*.{jpg,png,svg}')
-    .pipe(gulp.dest('./build/img/'));
+var html = function () {
+  return gulp.src('./source/pug/*.pug')
+    .pipe(plumber({
+      errorHandler: notify.onError()
+    }))
+    .pipe(pug())
+    .pipe(gulp.dest('./build/'))
+    .pipe(browserSync.stream());
 }
 
 var serve = function () {
@@ -60,10 +72,10 @@ var serve = function () {
     ui: false
   });
   gulp.watch('./source/sass/**/*.scss', style);
-  // gulp.watch('source/img/*.svg', gulp.series(svgUpdate, html)).on('change', browserSync.reload);
-  // gulp.watch('source/js/*.js', scripts).on('change', browserSync.reload);
+  // gulp.watch('source/img/*.svg', gulp.series(svgUpdate, html)).on('change', browserSync.reload); //TODO: добавить позже
+  gulp.watch('source/js/*.js', scripts).on('change', browserSync.reload);
   gulp.watch('./source/pug/**/*.pug', html);
 }
 
-gulp.task('build', gulp.series(clean, images, html));
+gulp.task('build', gulp.series(clean, fonts, images, scripts, style, html));
 gulp.task('serve', serve);
