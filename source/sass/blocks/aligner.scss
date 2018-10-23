@@ -2,4 +2,8 @@
   width: 360px;
 
   @include margin-hor;
+
+  @media (min-width: $min-tablet-width) {
+    width: 720px;
+  }
 }
