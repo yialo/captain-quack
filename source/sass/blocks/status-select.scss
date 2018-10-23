@@ -9,7 +9,7 @@
     content: "";
     position: absolute;
     top: 17px;
-    right: 16px;
+    right: 10%;
     width: 12px;
     height: 6px;
     border-top: 6px solid black;
@@ -23,8 +23,8 @@
   display: block;
   padding-top: 10px;
   padding-bottom: 9px;
-  padding-left: 9px;
-  padding-right: 38px;
+  padding-left: calc(6.25% - 1px);
+  padding-right: 23.75%;
   border: 1px solid #dcdcdc;
   border-bottom-width: 2px;
   outline: none;
@@ -73,7 +73,7 @@
 }
 
 .status-select__item {
-  padding-left: 9px;
+  @include padding-hor(calc(6.25% - 1px));
 
   &:nth-last-child(n+2) {
     margin-bottom: 9px;

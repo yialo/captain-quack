@@ -5,11 +5,13 @@
 .page-header__wrapper {
   padding-top: 13px;
   padding-bottom: 4px;
-  padding-left: 14px;
 }
 
 .page-header__logo {
   display: block;
   width: 297px;
   height: 63px;
+
+  @include margin-hor;
+  transform: translateX(-17px);
 }

@@ -1,13 +1,12 @@
 .page-main__intro {
   margin-bottom: 13px;
 
-  @include padding-hor;
+  @include padding-hor(calc(25% / 9));
 }
 
 .page-main__slogan {
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 1px;
 
   @include font(700, 42px, 42px);
   text-align: center;

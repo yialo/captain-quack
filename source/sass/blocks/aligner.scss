@@ -1,6 +1,4 @@
 .aligner {
-  width: 360px;
-
   @include margin-hor;
 
   @media (min-width: $min-tablet-width) {
