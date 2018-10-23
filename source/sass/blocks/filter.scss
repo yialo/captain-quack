@@ -1,0 +1,113 @@
+.filter {
+  margin-bottom: 100px;
+}
+
+.filter__wrapper {
+  @include outline;
+}
+
+.filter__form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.filter__item {
+  &--text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--text--title {
+    width: 340px;
+    margin-bottom: 8px;
+  }
+
+  &--text--price {
+    width: 160px;
+    margin-right: 20px;
+    margin-bottom: 8px;
+  }
+
+  &--text--year {
+    width: 160px;
+    margin-bottom: 8px;
+  }
+
+  &--text--description {
+    width: 340px;
+    margin-bottom: 15px;
+  }
+
+  &--color {
+    width: 340px;
+    margin-bottom: 30px;
+  }
+
+  &--status {
+    width: 160px;
+    margin-right: 20px;
+  }
+
+  &--button {
+    width: 160px;
+  }
+}
+
+.filter__label {
+  display: block;
+
+  @include font(400, 12px, 18px);
+  color: $gray-light-text;
+
+  &--text {
+    margin-bottom: 4px;
+    padding-left: 10px;
+    visibility: hidden;
+  }
+
+  .filter__field:focus + &--text {
+    visibility: visible;
+  }
+
+  &--color {
+    margin-bottom: 7px;
+  }
+}
+
+.filter__field {
+  order: 1;
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 9px;
+
+  @include padding-hor(9px);
+  @include font(400, 12px, 18px);
+  color: #111111;
+  border: 1px solid #dcdcdc;
+  border-bottom-width: 2px;
+  cursor: pointer;
+
+  &::placeholder {
+    color: $gray-light-text;
+  }
+
+  &:hover {
+    border-bottom-color: $crimson;
+  }
+
+  &:focus {
+    border-bottom-color: #111111;
+    outline: none;
+  }
+
+  &:focus::placeholder {
+    visibility: hidden;
+  }
+}
+
+.filter__color-list {
+  margin-top: 0;
+  margin-bottom: 0;
+}

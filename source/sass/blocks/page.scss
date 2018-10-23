@@ -1,0 +1,19 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.page__header {
+  flex-shrink: 0;
+  margin-bottom: 26px;
+}
+
+.page__main {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.page-footer {
+  flex-shrink: 0;
+}

@@ -18,7 +18,7 @@ var sass = require('gulp-sass');
 // Task functions
 
 var clean = function () {
-  return del('build');
+  return del('./build/');
 }
 
 var fonts = function () {
@@ -28,6 +28,12 @@ var fonts = function () {
 
 var images = function () {
   return gulp.src('./source/img/*.{jpg,png,svg}')
+    .pipe(gulp.dest('./build/img/'));
+}
+
+var svgupdate = function () {
+  del('./build/img/*.svg');
+  return gulp.src('./source/img/*.svg')
     .pipe(gulp.dest('./build/img/'));
 }
 
@@ -72,10 +78,11 @@ var serve = function () {
     ui: false
   });
   gulp.watch('./source/sass/**/*.scss', style);
-  // gulp.watch('source/img/*.svg', gulp.series(svgUpdate, html)).on('change', browserSync.reload); //TODO: добавить позже
-  gulp.watch('source/js/*.js', scripts).on('change', browserSync.reload);
+  gulp.watch('./source/js/*.js', scripts).on('change', browserSync.reload);
   gulp.watch('./source/pug/**/*.pug', html);
+  gulp.watch('./source/img/*.svg', svgupdate).on('change', browserSync.reload);
 }
 
 gulp.task('build', gulp.series(clean, fonts, images, scripts, style, html));
 gulp.task('serve', serve);
+

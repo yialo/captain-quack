@@ -1,0 +1,35 @@
+.button {
+  display: block;
+  padding: 0;
+  border-style: none;
+  cursor: pointer;
+
+  &--filter {
+    display: flex;
+    justify-content: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    @include font(700, 16px, 36px);
+    text-transform: uppercase;
+    color: white;
+    background-color: $crimson;
+    border-radius: 4px;
+  }
+}
+
+.button__text {
+  transform: translateX(-7px);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: -15px;
+    width: 8px;
+    height: 12px;
+    margin-left: 10px;
+    background-image: url("../img/arrow-right.svg");
+    background-size: 8px 12px;
+  }
+}

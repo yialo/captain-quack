@@ -1,0 +1,42 @@
+.palette {
+  display: flex;
+
+  @include list;
+}
+
+.palette__item:nth-last-child(n+2) {
+  margin-right: 24px;
+}
+
+.palette__label {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  .palette__field:checked + & {
+    box-shadow: 0 0 0 4px $crimson;
+  }
+
+  &--white {
+    background-color: white;
+    border: 1px solid #dddddd;
+  }
+
+  &--black {
+    background-color: black;
+  }
+
+  &--gray {
+    background-color: #cbcbcc;
+  }
+
+  &--crimson {
+    background-color: $crimson;
+  }
+
+  &--lime {
+    background-color: $lime;
+  }
+}

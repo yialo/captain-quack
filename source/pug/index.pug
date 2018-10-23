@@ -11,7 +11,7 @@ html(lang="ru")
     link(rel="preload" href="fonts/roboto-bold.woff2" as="font")
     link(rel="stylesheet" href="css/style.min.css")
   body(class="page")
-    header(class="page-header")
+    header(class="page__header  page-header")
       div(class="page-header__wrapper  aligner")
         picture
           source(
@@ -24,66 +24,71 @@ html(lang="ru")
             alt="Captain Quack"
           )
 
-    main(class="page-main")
+    main(class="page__main  page-main")
       header(class="page-main__intro  aligner")
         h1(class="page-main__title  visually-hidden") Каталог
-        p(class="page-main__lead") ¡Ay caramba!
+        p(class="page-main__slogan") ¡Ay caramba!
 
       section(class="page-main__filter  filter")
         div(class="filter__wrapper  aligner")
           h2(class="filter__title  visually-hidden") Фильтр
-          form(class="filter__form")
+          form(class="filter__form" action="https://echo.htmlacademy.ru" method="GET")
 
-            div(class="filter__item  filter__item--title")
+            div(class="filter__item  filter__item--text  filter__item--text--title")
+              input(class="filter__field" type="text" id="title" placeholder="Название")
               label(class="filter__label  filter__label--text" for="title") Название
-              input(class="filter__field  filter__field--text" type="text" id="title" placeholder="Название")
 
-            div(class="filter__item  filter__item--price")
+            div(class="filter__item  filter__item--text  filter__item--text--price")
+              input(class="filter__field" type="text" id="price" placeholder="Цена")
               label(class="filter__label  filter__label--text" for="price") Цена
-              input(class="filter__field  filter__field--text" type="text" id="price" placeholder="Цена")
 
-            div(class="filter__item  filter__item--year")
+            div(class="filter__item  filter__item--text  filter__item--text--year")
+              input(class="filter__field" type="text" id="year" placeholder="Год")
               label(class="filter__label  filter__label--text" for="year") Год
-              input(class="filter__field  filter__field--text" type="text" id="year" placeholder="Год")
 
-            div(class="filter__item  filter__item--description")
+            div(class="filter__item  filter__item--text  filter__item--text--description")
+              input(class="filter__field" type="text" id="description" placeholder="Описание")
               label(class="filter__label  filter__label--text" for="description") Описание
-              input(class="filter__field  filter__field--text" type="text" id="description" placeholder="Описание")
 
             div(class="filter__item  filter__item--color")
               span(class="filter__label  filter__label--color") Цвет
               ul(class="filter__color-list  palette")
                 li(class="palette__item")
-                  input(class="palette__field  palette__field--white" type="radio" name="color" value="white" id="white")
-                  label(class="palette__label" for="white") Белый
+                  input(class="palette__field  visually-hidden" type="radio" name="color" value="white" id="white")
+                  label(class="palette__label  palette__label--white" for="white")
+                    span(class="palette__legend  visually-hidden") Белый
                 li(class="palette__item")
-                  input(class="palette__field  palette__field--black" type="radio" name="color" value="black" id="black")
-                  label(class="palette__label" for="black") Чёрный
+                  input(class="palette__field  visually-hidden" type="radio" name="color" value="black" id="black")
+                  label(class="palette__label  palette__label--black" for="black")
+                    span(class="palette__legend  visually-hidden") Чёрный
                 li(class="palette__item")
-                  input(class="palette__field  palette__field--gray" type="radio" name="color" value="gray" id="gray")
-                  label(class="palette__label" for="gray") Серый
+                  input(class="palette__field  visually-hidden" type="radio" name="color" value="gray" id="gray" checked)
+                  label(class="palette__label  palette__label--gray" for="gray")
+                    span(class="palette__legend  visually-hidden") Серый
                 li(class="palette__item")
-                  input(class="palette__field  palette__field--crimson" type="radio" name="color" value="crimson" id="crimson")
-                  label(class="palette__label" for="crimson") Малиновый
+                  input(class="palette__field  visually-hidden" type="radio" name="color" value="crimson" id="crimson")
+                  label(class="palette__label  palette__label--crimson" for="crimson")
+                    span(class="palette__legend  visually-hidden") Малиновый
                 li(class="palette__item")
-                  input(class="palette__field  palette__field--lime" type="radio" name="color" value="lime" id="lime")
-                  label(class="palette__label" for="lime") Лайм
+                  input(class="palette__field  visually-hidden" type="radio" name="color" value="lime" id="lime")
+                  label(class="palette__label  palette__label--lime" for="lime")
+                    span(class="palette__legend  visually-hidden") Лайм
 
             div(class="filter__item  filter__item--status  status-select")
-              p(class="status-select__tip") Статус
+              span(class="status-select__tip") Статус
               ul(class="status-select__list")
                 li(class="status-select__item")
-                  input(class="status-select__field" type="radio" name="status" value="in-stock" id="in-stock")
+                  input(class="status-select__field  visually-hidden" type="radio" name="status" value="in-stock" id="in-stock")
                   label(class="status-select__label" for="in-stock") В наличии
                 li(class="status-select__item")
-                  input(class="status-select__field" type="radio" name="status" value="pending" id="pending")
+                  input(class="status-select__field  visually-hidden" type="radio" name="status" value="pending" id="pending")
                   label(class="status-select__label" for="pending") Ожидается
                 li(class="status-select__item")
-                  input(class="status-select__field" type="radio" name="status" value="not-available" id="not-available")
+                  input(class="status-select__field  visually-hidden" type="radio" name="status" value="not-available" id="not-available")
                   label(class="status-select__label" for="not-available") Нет в наличии
 
             button(class="filter__item  filter__item--button  button  button--filter" type="submit")
-              span(class="button-fix") Отправить
+              span(class="button__text  button-fix") Отправить
 
       section(class="page-main__catalog  catalog")
         div(class="catalog__wrapper  aligner")
@@ -105,7 +110,7 @@ html(lang="ru")
                 td(class="table__cell  table__cell--body  table__cell--body--year") 2012
                 td(class="table__cell  table__cell--body  table__cell--body--color")
                   div(class="table__color")
-                    span(class="table__color-legend") Чёрный
+                    span(class="table__color-legend  visually-hidden") Чёрный
                 td(class="table__cell  table__cell--body  table__cell--body--status") Ожидается
                 td(class="table__cell  table__cell--body  table__cell--body--price") 1 689 000 руб.
                 td(class="table__cell  table__cell--body  table__cell--body--action")
@@ -117,7 +122,7 @@ html(lang="ru")
                 td(class="table__cell  table__cell--body  table__cell--body--year") 2012
                 td(class="table__cell  table__cell--body  table__cell--body--color")
                   div(class="table__color")
-                    span(class="table__color-legend") Белый
+                    span(class="table__color-legend  visually-hidden") Белый
                 td(class="table__cell  table__cell--body  table__cell--body--status") Ожидается
                 td(class="table__cell  table__cell--body  table__cell--body--price") 1 189 900 руб.
                 td(class="table__cell  table__cell--body  table__cell--body--action")
@@ -129,7 +134,7 @@ html(lang="ru")
                 td(class="table__cell  table__cell--body  table__cell--body--year") 2012
                 td(class="table__cell  table__cell--body  table__cell--body--color")
                   div(class="table__color")
-                    span(class="table__color-legend") Чёрный
+                    span(class="table__color-legend  visually-hidden") Чёрный
                 td(class="table__cell  table__cell--body  table__cell--body--status") В наличии
                 td(class="table__cell  table__cell--body  table__cell--body--price") 1 459 000 руб.
                 td(class="table__cell  table__cell--body  table__cell--body--action")
@@ -141,7 +146,7 @@ html(lang="ru")
                 td(class="table__cell  table__cell--body  table__cell--body--year") 2012
                 td(class="table__cell  table__cell--body  table__cell--body--color")
                   div(class="table__color")
-                    span(class="table__color-legend") Серый
+                    span(class="table__color-legend  visually-hidden") Серый
                 td(class="table__cell  table__cell--body  table__cell--body--status") Ожидается
                 td(class="table__cell  table__cell--body  table__cell--body--price") 1 459 000 руб.
                 td(class="table__cell  table__cell--body  table__cell--body--action")
@@ -153,7 +158,7 @@ html(lang="ru")
                 td(class="table__cell  table__cell--body  table__cell--body--year") 2012
                 td(class="table__cell  table__cell--body  table__cell--body--color")
                   div(class="table__color")
-                    span(class="table__color-legend") Малиновый
+                    span(class="table__color-legend  visually-hidden") Малиновый
                 td(class="table__cell  table__cell--body  table__cell--body--status") Ожидается
                 td(class="table__cell  table__cell--body  table__cell--body--price") 786 000 руб.
                 td(class="table__cell  table__cell--body  table__cell--body--action")
@@ -166,14 +171,14 @@ html(lang="ru")
                 td(class="table__cell  table__cell--body  table__cell--body--year") 2013
                 td(class="table__cell  table__cell--body  table__cell--body--color")
                   div(class="table__color")
-                    span(class="table__color-legend") Лайм
+                    span(class="table__color-legend  visually-hidden") Лайм
                 td(class="table__cell  table__cell--body  table__cell--body--status") Нет в наличии
                 td(class="table__cell  table__cell--body  table__cell--body--price") 821 000 руб.
                 td(class="table__cell  table__cell--body  table__cell--body--action")
                   button(class="table__button  button  button--table")
                     span(class="button-fix") Удалить
 
-    footer(class="page-footer")
+    footer(class="page__footer  page-footer")
       div(class="page-footer__wrapper  aligner")
         div(class="page-footer__copyright  copyright")
           span(class="copyright__heading") © 2015 Captain Quack
