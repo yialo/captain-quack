@@ -27,8 +27,13 @@
   padding-right: 38px;
   border: 1px solid #dcdcdc;
   border-bottom-width: 2px;
+  outline: none;
 
   &:hover {
+    border-bottom-color: $crimson;
+  }
+
+  &:focus {
     border-bottom-color: $crimson;
   }
 
@@ -37,6 +42,10 @@
   }
 
   &--js--opened:hover {
+    border-bottom-color: black;
+  }
+
+  &--js--opened:focus {
     border-bottom-color: black;
   }
 }

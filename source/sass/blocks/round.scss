@@ -1,0 +1,27 @@
+.round {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+  &--white {
+    background-color: white;
+    border: 1px solid #dddddd;
+  }
+
+  &--black {
+    background-color: black;
+  }
+
+  &--gray {
+    background-color: #cbcbcc;
+  }
+
+  &--crimson {
+    background-color: $crimson;
+  }
+
+  &--lime {
+    background-color: $lime;
+  }
+}

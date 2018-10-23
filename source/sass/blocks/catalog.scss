@@ -1,10 +1,7 @@
-.catalog {
-  background-color: #f5f6f6;
-  border-top: 2px solid #dcdcdc;
-}
-
 .catalog__title {
   @media (max-width: $max-phone-width) {
     @include visually-hider;
   }
+  //TODO: удалить в будущем
+  display: none;
 }

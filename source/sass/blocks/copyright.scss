@@ -1,0 +1,16 @@
+.copyright {
+  @include font(300, 11px, 11px);
+  text-align: center;
+  color: white;
+}
+
+.copyright__heading {
+  margin-top: 0;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.copyright__description {
+  margin-top: 0;
+  margin-bottom: 0;
+}

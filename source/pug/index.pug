@@ -10,6 +10,7 @@ html(lang="ru")
     link(rel="preload" href="fonts/roboto-medium.woff2" as="font")
     link(rel="preload" href="fonts/roboto-bold.woff2" as="font")
     link(rel="stylesheet" href="css/style.min.css")
+
   body(class="page")
     header(class="page__header  page-header")
       div(class="page-header__wrapper  aligner")
@@ -55,27 +56,27 @@ html(lang="ru")
               ul(class="filter__color-list  palette")
                 li(class="palette__item")
                   input(class="palette__field  visually-hidden" type="radio" name="color" value="white" id="white")
-                  label(class="palette__label  palette__label--white" for="white")
+                  label(class="palette__label  round  round--white" for="white")
                     span(class="palette__legend  visually-hidden") Белый
                 li(class="palette__item")
                   input(class="palette__field  visually-hidden" type="radio" name="color" value="black" id="black")
-                  label(class="palette__label  palette__label--black" for="black")
+                  label(class="palette__label  round  round--black" for="black")
                     span(class="palette__legend  visually-hidden") Чёрный
                 li(class="palette__item")
                   input(class="palette__field  visually-hidden" type="radio" name="color" value="gray" id="gray" checked)
-                  label(class="palette__label  palette__label--gray" for="gray")
+                  label(class="palette__label  round  round--gray" for="gray")
                     span(class="palette__legend  visually-hidden") Серый
                 li(class="palette__item")
                   input(class="palette__field  visually-hidden" type="radio" name="color" value="crimson" id="crimson")
-                  label(class="palette__label  palette__label--crimson" for="crimson")
+                  label(class="palette__label  round  round--crimson" for="crimson")
                     span(class="palette__legend  visually-hidden") Малиновый
                 li(class="palette__item")
                   input(class="palette__field  visually-hidden" type="radio" name="color" value="lime" id="lime")
-                  label(class="palette__label  palette__label--lime" for="lime")
+                  label(class="palette__label  round  round--lime" for="lime")
                     span(class="palette__legend  visually-hidden") Лайм
 
             div(class="filter__item  filter__item--status  status-select")
-              span(class="status-select__tip") Статус
+              span(class="status-select__tip" tabindex="0") Статус
               ul(class="status-select__list")
                 li(class="status-select__item")
                   input(class="status-select__field  visually-hidden" type="radio" name="status" value="in-stock" id="in-stock")
@@ -105,84 +106,84 @@ html(lang="ru")
 
             tbody(class="table__group  table__group--body")
               tr(class="table__row  table__row--body")
-                td(class="table__cell  table__cell--body  table__cell--body--title") 1.6 MT Ambiente 85 л.с. МКПП
+                td(class="table__cell  table__cell--body  table__cell--body--title  table__cell--body--title--item-1")
+                  p(class="table__item-title  table__item-title--item-1") 1.6 MT Ambiente 85 л.с. МКПП
                   p(class="table__addition") + доп. опция «Радио-навигационная система Amundasen 2DIN, CD, MP3»
                 td(class="table__cell  table__cell--body  table__cell--body--year") 2012
                 td(class="table__cell  table__cell--body  table__cell--body--color")
-                  div(class="table__color")
+                  div(class="table__color  round  round--black")
                     span(class="table__color-legend  visually-hidden") Чёрный
                 td(class="table__cell  table__cell--body  table__cell--body--status") Ожидается
                 td(class="table__cell  table__cell--body  table__cell--body--price") 1 689 000 руб.
                 td(class="table__cell  table__cell--body  table__cell--body--action")
-                  button(class="table__button  button  button--table")
-                    span(class="button-fix") Удалить
+                  a(class="table__button  button  button--table" href="#") Удалить
 
               tr(class="table__row  table__row--body")
-                td(class="table__cell  table__cell--body  table__cell--body--title") 1.6 MT Ambiente Plus 105 л.с. МКПП
+                td(class="table__cell  table__cell--body  table__cell--body--title  table__cell--body--title--item-2")
+                  p(class="table__item-title  table__item-title--item-2") 1.6 MT Ambiente Plus 105 л.с. МКПП
                 td(class="table__cell  table__cell--body  table__cell--body--year") 2012
                 td(class="table__cell  table__cell--body  table__cell--body--color")
-                  div(class="table__color")
+                  div(class="table__color  round  round--white")
                     span(class="table__color-legend  visually-hidden") Белый
                 td(class="table__cell  table__cell--body  table__cell--body--status") Ожидается
                 td(class="table__cell  table__cell--body  table__cell--body--price") 1 189 900 руб.
                 td(class="table__cell  table__cell--body  table__cell--body--action")
-                  button(class="table__button  button  button--table")
-                    span(class="button-fix") Удалить
+                  a(class="table__button  button  button--table" href="#") Удалить
 
               tr(class="table__row  table__row--body")
-                td(class="table__cell  table__cell--body  table__cell--body--title") 1.6 MT Trend 105 л.с. МКПП
+                td(class="table__cell  table__cell--body  table__cell--body--title  table__cell--body--title--item-3")
+                  p(class="table__item-title  table__item-title--item-3") 1.6 MT Trend 105 л.с. МКПП
                 td(class="table__cell  table__cell--body  table__cell--body--year") 2012
                 td(class="table__cell  table__cell--body  table__cell--body--color")
-                  div(class="table__color")
+                  div(class="table__color  round  round--black")
                     span(class="table__color-legend  visually-hidden") Чёрный
                 td(class="table__cell  table__cell--body  table__cell--body--status") В наличии
                 td(class="table__cell  table__cell--body  table__cell--body--price") 1 459 000 руб.
                 td(class="table__cell  table__cell--body  table__cell--body--action")
-                  button(class="table__button  button  button--table")
-                    span(class="button-fix") Удалить
+                  a(class="table__button  button  button--table" href="#") Удалить
 
               tr(class="table__row  table__row--body")
-                td(class="table__cell  table__cell--body  table__cell--body--title") 1.6 PowerShift Trend Sport 105л.с. АКПП
+                td(class="table__cell  table__cell--body  table__cell--body--title  table__cell--body--title--item-4")
+                  p(class="table__item-title  table__item-title--item-4") 1.6 PowerShift Trend Sport 105л.с. АКПП
                 td(class="table__cell  table__cell--body  table__cell--body--year") 2012
                 td(class="table__cell  table__cell--body  table__cell--body--color")
-                  div(class="table__color")
+                  div(class="table__color  round  round--gray")
                     span(class="table__color-legend  visually-hidden") Серый
                 td(class="table__cell  table__cell--body  table__cell--body--status") Ожидается
                 td(class="table__cell  table__cell--body  table__cell--body--price") 1 459 000 руб.
                 td(class="table__cell  table__cell--body  table__cell--body--action")
-                  button(class="table__button  button  button--table")
-                    span(class="button-fix") Удалить
+                  a(class="table__button  button  button--table" href="#") Удалить
 
               tr(class="table__row  table__row--body")
-                td(class="table__cell  table__cell--body  table__cell--body--title") 2.0 MT Trend Sport 150 л.с. МКПП
+                td(class="table__cell  table__cell--body  table__cell--body--title  table__cell--body--title--item-5")
+                  p(class="table__item-title  table__item-title--item-5") 2.0 MT Trend Sport 150 л.с. МКПП
                 td(class="table__cell  table__cell--body  table__cell--body--year") 2012
                 td(class="table__cell  table__cell--body  table__cell--body--color")
-                  div(class="table__color")
+                  div(class="table__color  round  round--crimson")
                     span(class="table__color-legend  visually-hidden") Малиновый
                 td(class="table__cell  table__cell--body  table__cell--body--status") Ожидается
                 td(class="table__cell  table__cell--body  table__cell--body--price") 786 000 руб.
                 td(class="table__cell  table__cell--body  table__cell--body--action")
-                  button(class="table__button  button  button--table")
-                    span(class="button-fix") Удалить
+                  a(class="table__button  button  button--table" href="#") Удалить
 
               tr(class="table__row  table__row--body")
-                td(class="table__cell  table__cell--body  table__cell--body--title") 2.0 PowerShift Trend Sport 150 л.с. АКПП
+                td(class="table__cell  table__cell--body  table__cell--body--title  table__cell--body--title--item-6")
+                  p(class="table__item-title  table__item-title--item-6") 2.0 PowerShift Trend Sport 150 л.с. АКПП
                   p(class="table__addition") + доп. опция «Радио-навигационная система Amundasen 2DIN, CD, MP3»
                 td(class="table__cell  table__cell--body  table__cell--body--year") 2013
                 td(class="table__cell  table__cell--body  table__cell--body--color")
-                  div(class="table__color")
+                  div(class="table__color  round  round--lime")
                     span(class="table__color-legend  visually-hidden") Лайм
                 td(class="table__cell  table__cell--body  table__cell--body--status") Нет в наличии
                 td(class="table__cell  table__cell--body  table__cell--body--price") 821 000 руб.
                 td(class="table__cell  table__cell--body  table__cell--body--action")
-                  button(class="table__button  button  button--table")
-                    span(class="button-fix") Удалить
+                  a(class="table__button  button  button--table" href="#") Удалить
 
     footer(class="page__footer  page-footer")
       div(class="page-footer__wrapper  aligner")
         div(class="page-footer__copyright  copyright")
-          span(class="copyright__heading") © 2015 Captain Quack
-          span(class="copyright__description") Десница тысячелетия и моллюск!
+          p(class="copyright__heading") © 2015 Captain Quack
+          p(class="copyright__description") Десница тысячелетия и моллюск!
 
     script(src="js/picturefill.min.js")
     script(src="js/filter-select.js")

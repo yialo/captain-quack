@@ -1,6 +1,5 @@
 .button {
   display: block;
-  padding: 0;
   border-style: none;
   cursor: pointer;
 
@@ -10,11 +9,22 @@
     padding-top: 2px;
     padding-bottom: 2px;
 
+    @include padding-hor;
     @include font(700, 16px, 36px);
     text-transform: uppercase;
     color: white;
     background-color: $crimson;
     border-radius: 4px;
+  }
+
+  &--table {
+    padding-top: 6px;
+    padding-bottom: 7px;
+
+    @include padding-hor;
+    color: white;
+    background-color: $gray-dark-text;
+    border-radius: 16px;
   }
 }
 
