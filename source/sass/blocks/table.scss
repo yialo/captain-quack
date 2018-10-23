@@ -23,21 +23,23 @@
     padding-top: 18px;
     padding-bottom: 18px;
 
-    @include padding-hor(20px);
+    @include padding-hor(calc(50% / 9));
     background-color: #f5f6f6;
     border-top: 1px solid #dcdcdc;
   }
 }
 
 .table__cell {
+  flex-shrink: 0;
   display: block;
+  padding: 0;
 
   @include font(300, 14px, 16px);
 
   &--body--title {
     position: relative;
-    width: 150px;
-    margin-right: 20px;
+    width: 46.875%;
+    margin-right: 6.25%;
   }
 
   &--body--title--item-1 {
@@ -66,24 +68,29 @@
 
   &--body--year {
     order: 1;
+    width: 10%;
     margin-top: 7px;
-    margin-right: 20px;
+    margin-right: 6.25%;
   }
 
   &--body--color {
-    width: 40px;
-    padding-left: 9px;
+    display: flex;
+    justify-content: flex-end;
+    width: 12.5%;
+    padding-right: 11px;
   }
 
   &--body--status {
     order: 1;
+    width: 59.375%;
     margin-top: 7px;
     margin-right: auto;
   }
 
   &--body--price {
-    width: 110px;
+    width: 34.375%;
     margin-top: 1px;
+    margin-bottom: 15px;
     padding-right: 10px;
     text-align: right;
   }

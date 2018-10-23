@@ -1,5 +1,5 @@
 .filter__wrapper {
-  @include padding-hor;
+  @include padding-hor(calc(25% / 9));
 }
 
 .filter__form {
@@ -15,38 +15,38 @@
   }
 
   &--text--title {
-    width: 340px;
+    width: 100%;
     margin-bottom: 8px;
   }
 
   &--text--price {
-    width: 160px;
-    margin-right: 20px;
+    width: calc(800% / 17);
+    margin-right: calc(100% / 17);
     margin-bottom: 8px;
   }
 
   &--text--year {
-    width: 160px;
+    width: calc(800% / 17);
     margin-bottom: 8px;
   }
 
   &--text--description {
-    width: 340px;
+    width: 100%;
     margin-bottom: 15px;
   }
 
   &--color {
-    width: 340px;
+    width: 100%;
     margin-bottom: 30px;
   }
 
   &--status {
-    width: 160px;
-    margin-right: 20px;
+    width: calc(800% / 17);
+    margin-right: calc(100% / 17);
   }
 
   &--button {
-    width: 160px;
+    width: calc(800% / 17);
   }
 }
 
@@ -58,7 +58,7 @@
 
   &--text {
     margin-bottom: 4px;
-    padding-left: 10px;
+    padding-left: calc(50% / 17);
     visibility: hidden;
   }
 
@@ -78,7 +78,6 @@
   padding-top: 10px;
   padding-bottom: 9px;
 
-  @include padding-hor(9px);
   @include font(400, 12px, 18px);
   color: #111111;
   border: 1px solid #dcdcdc;
@@ -100,6 +99,22 @@
 
   &:focus::placeholder {
     visibility: hidden;
+  }
+
+  &--title {
+    @include padding-hor(calc(50% / 17 - 1px));
+  }
+
+  &--price {
+    @include padding-hor(calc(6.25% - 1px));
+  }
+
+  &--year {
+    @include padding-hor(calc(6.25% - 1px));
+  }
+
+  &--description {
+    @include padding-hor(calc(50% / 17 - 1px));
   }
 }
 

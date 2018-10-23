@@ -5,7 +5,7 @@
 }
 
 .palette__item:nth-last-child(n+2) {
-  margin-right: 24px;
+  margin-right: calc(120% / 17);
 }
 
 .palette__label {

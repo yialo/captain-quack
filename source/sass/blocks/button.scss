@@ -9,7 +9,7 @@
     padding-top: 2px;
     padding-bottom: 2px;
 
-    @include padding-hor;
+    @include padding-hor(6.25%);
     @include font(700, 16px, 36px);
     text-transform: uppercase;
     color: white;
@@ -21,7 +21,7 @@
     padding-top: 6px;
     padding-bottom: 7px;
 
-    @include padding-hor;
+    @include padding-hor(calc(250% / 18));
     color: white;
     background-color: $gray-dark-text;
     border-radius: 16px;
