@@ -79,13 +79,13 @@ html(lang="ru")
               ul(class="status-select__list")
                 li(class="status-select__item")
                   input(class="status-select__field  visually-hidden" type="radio" name="status" value="in-stock" id="in-stock")
-                  label(class="status-select__label" for="in-stock") В наличии
+                  label(class="status-select__label  status-select__label--in-stock" for="in-stock") В наличии
                 li(class="status-select__item")
                   input(class="status-select__field  visually-hidden" type="radio" name="status" value="pending" id="pending")
-                  label(class="status-select__label" for="pending") Ожидается
+                  label(class="status-select__label  status-select__label--pending" for="pending") Ожидается
                 li(class="status-select__item")
                   input(class="status-select__field  visually-hidden" type="radio" name="status" value="not-available" id="not-available")
-                  label(class="status-select__label" for="not-available") Нет в наличии
+                  label(class="status-select__label  status-select__label-not-available" for="not-available") Нет в наличии
 
             button(class="filter__item  filter__item--button  button  button--filter" type="submit")
               span(class="button__text  button-fix") Отправить
@@ -185,3 +185,4 @@ html(lang="ru")
           span(class="copyright__description") Десница тысячелетия и моллюск!
 
     script(src="js/picturefill.min.js")
+    script(src="js/filter-select.js")

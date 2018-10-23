@@ -2,10 +2,6 @@
   margin-bottom: 100px;
 }
 
-.filter__wrapper {
-  @include outline;
-}
-
 .filter__form {
   display: flex;
   flex-wrap: wrap;

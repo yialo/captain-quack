@@ -1,15 +1,8 @@
 .status-select {
   position: relative;
-  padding-top: 10px;
-  padding-bottom: 9px;
-  padding-left: 9px;
-  color: #111111;
-  border-style: solid;
-  border-color: #dcdcdc;
-  border-top-width: 1px;
-  border-bottom-width: 2px;
-  border-left-width: 1px;
-  border-right-width: 1px;
+
+  @include font(400, 12px, 18px);
+  color: $gray-light-text;
   cursor: pointer;
 
   &::after {
@@ -27,8 +20,21 @@
 }
 
 .status-select__tip {
-  @include font(400, 12px, 18px);
-  color: $gray-light-text;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 9px;
+  padding-right: 38px;
+  border: 1px solid #dcdcdc;
+  border-bottom-width: 2px;
+
+  &:hover {
+    border-bottom-color: $crimson;
+  }
+
+  &--js--opened {
+    border-bottom-color: #111111;
+  }
 }
 
 .status-select__list {
@@ -40,13 +46,14 @@
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 7px;
+  padding-top: 10px;
+  padding-bottom: 8px;
 
   @include list;
   border: 1px solid #dcdcdc;
-  border-top: 2px solid #111111;
+  border-top-style: none;
 
-  .status-select:hover & {
+  &--js--opened {
     display: block;
   }
 }
@@ -55,22 +62,15 @@
   padding-left: 9px;
 
   &:nth-last-child(n+2) {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 }
 
 .status-select__label {
   display: block;
-
-  @include font(400, 12px, 18px);
-  color: $gray-light-text;
   cursor: pointer;
 
   &:hover {
-    color: black;
-  }
-
-  .status-select__field:checked + & {
     color: black;
   }
 }
