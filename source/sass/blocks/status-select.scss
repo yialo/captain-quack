@@ -36,14 +36,15 @@
   top: calc(100% - 1px);
   left: 0;
   z-index: 1;
-  // display: none;
+  display: none;
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 7px;
-  border-top: 2px solid #111111;
 
   @include list;
+  border: 1px solid #dcdcdc;
+  border-top: 2px solid #111111;
 
   .status-select:hover & {
     display: block;
@@ -59,10 +60,17 @@
 }
 
 .status-select__label {
+  display: block;
+
   @include font(400, 12px, 18px);
   color: $gray-light-text;
+  cursor: pointer;
 
   &:hover {
+    color: black;
+  }
+
+  .status-select__field:checked + & {
     color: black;
   }
 }
