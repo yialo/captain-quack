@@ -16,7 +16,16 @@ html(lang="ru")
       div(class="page-header__wrapper  aligner")
         picture
           source(
-            media="(min-width: 720px)",
+            type="image/webp"
+            media="(min-width: 720px)"
+            srcset="img/logo-large.webp"
+          )
+          source(
+            type="image/webp"
+            srcset="img/logo-small.webp"
+          )
+          source(
+            media="(min-width: 720px)"
             srcset="img/logo-large.png"
           )
           img(
