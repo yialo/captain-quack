@@ -33,17 +33,3 @@
   padding-left: $ph;
   padding-right: $ph;
 }
-
-//TODO: deleta at the end of work
-
-@mixin outline {
-  outline: 1px solid red;
-  outline-offset: -1px;
-}
-
-@mixin outline-childs {
-  & > * {
-    outline: 1px solid red;
-    outline-offset: -1px;
-  }
-}

@@ -30,3 +30,27 @@ optionNotAvailable.addEventListener('click', function(evt) {
   statusTip.innerHTML = '';
   statusTip.innerHTML = optionNotAvailable.innerHTML;
 });
+
+window.addEventListener('keydown', function(evt) {
+  if (evt.keyCode === 27) {
+    if (selectList.classList.contains('status-select__list--js--opened')) {
+      evt.preventDefault();
+      selectList.classList.remove('status-select__list--js--opened');
+      statusTip.classList.remove('status-select__tip--js--opened');
+    }
+  }
+});
+
+window.addEventListener('keydown', function(evt) {
+  if (evt.keyCode === 13) {
+    if (selectList.classList.contains('status-select__list--js--opened')) {
+      evt.preventDefault();
+      selectList.classList.remove('status-select__list--js--opened');
+      statusTip.classList.remove('status-select__tip--js--opened');
+    } else if (!selectList.classList.contains('status-select__list--js--opened')) {
+      evt.preventDefault();
+      selectList.classList.add('status-select__list--js--opened');
+      statusTip.classList.add('status-select__tip--js--opened');
+    }
+  }
+});
