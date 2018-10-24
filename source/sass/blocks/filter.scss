@@ -2,7 +2,7 @@
   @include padding-hor(calc(25% / 9));
 
   @media (min-width: $min-tablet-width) {
-    @include padding-hor(10px);
+    @include padding-hor(0);
   }
 }
 
@@ -21,74 +21,72 @@
   &--text--title {
     width: 100%;
     margin-bottom: 8px;
+
+    @media (min-width: $min-tablet-width) {
+      width: calc(220% / 7);
+      margin-right: 20px;
+    }
   }
 
   &--text--price {
     width: calc(800% / 17);
     margin-right: calc(100% / 17);
     margin-bottom: 8px;
+
+    @media (min-width: $min-tablet-width) {
+      order: 1;
+      width: calc(220% / 7);
+      margin-right: 0;
+    }
   }
 
   &--text--year {
     width: calc(800% / 17);
     margin-bottom: 8px;
+
+    @media (min-width: $min-tablet-width) {
+      width: calc(220% / 7);
+      margin-right: 20px;
+    }
   }
 
   &--text--description {
     width: 100%;
     margin-bottom: 15px;
+
+    @media (min-width: $min-tablet-width) {
+      order: 1;
+      width: 700px;
+    }
   }
 
   &--color {
     width: 100%;
     margin-bottom: 30px;
+
+    @media (min-width: $min-tablet-width) {
+      order: 1;
+      width: calc(220% / 7);
+      margin-right: 20px;
+    }
   }
 
   &--status {
     width: calc(800% / 17);
     margin-right: calc(100% / 17);
-  }
 
-  &--button {
-    width: calc(800% / 17);
-  }
-
-  @media (min-width: $min-tablet-width) {
-    &--text--title {
-      width: calc(220% / 7);
-      margin-right: 20px;
-    }
-
-    &--text--year {
-      width: calc(220% / 7);
-      margin-right: 20px;
-    }
-
-    &--text--price {
-      order: 1;
-      width: calc(220% / 7);
-      margin-right: 0;
-    }
-
-    &--text--description {
-      order: 1;
-      width: 700px;
-    }
-
-    &--color {
-      order: 1;
-      width: calc(220% / 7);
-      margin-right: 20px;
-    }
-
-    &--status {
+    @media (min-width: $min-tablet-width) {
       order: 1;
       width: calc(220% / 7);
       margin-top: 15px;
       margin-right: 20px;
     }
+  }
 
-    &--button {
+  &--button {
+    width: calc(800% / 17);
+
+    @media (min-width: $min-tablet-width) {
       order: 1;
       width: calc(220% / 7);
       margin-top: 15px;
@@ -113,18 +111,34 @@
 
   &--text--title {
     padding-left: calc(50% / 17);
+
+    @media (min-width: $min-tablet-width) {
+      padding-left: 10px;
+    }
   }
 
   &--text--price {
     padding-left: 6.25%;
+
+    @media (min-width: $min-tablet-width) {
+      padding-left: 10px;
+    }
   }
 
   &--text--year {
     padding-left: 6.25%;
+
+    @media (min-width: $min-tablet-width) {
+      padding-left: 10px;
+    }
   }
 
   &--text--description {
     padding-left: calc(50% / 17);
+
+    @media (min-width: $min-tablet-width) {
+      padding-left: 10px;
+    }
   }
 
   &--color {
@@ -164,18 +178,34 @@
 
   &--title {
     @include padding-hor(calc(50% / 17 - 1px));
+
+    @media (min-width: $min-tablet-width) {
+      @include padding-hor(9px);
+    }
   }
 
   &--price {
     @include padding-hor(calc(6.25% - 1px));
+
+    @media (min-width: $min-tablet-width) {
+      @include padding-hor(9px);
+    }
   }
 
   &--year {
     @include padding-hor(calc(6.25% - 1px));
+
+    @media (min-width: $min-tablet-width) {
+      @include padding-hor(9px);
+    }
   }
 
   &--description {
     @include padding-hor(calc(50% / 17 - 1px));
+
+    @media (min-width: $min-tablet-width) {
+      @include padding-hor(9px);
+    }
   }
 }
 

@@ -24,10 +24,15 @@
   padding-top: 10px;
   padding-bottom: 9px;
   padding-left: calc(6.25% - 1px);
-  padding-right: 23.75%;
+  padding-right: calc(23.75% - 1px);
   border: 1px solid #dcdcdc;
   border-bottom-width: 2px;
   outline: none;
+
+  @media (min-width: $min-tablet-width) {
+    padding-left: 9px;
+    padding-right: 38px;
+  }
 
   &:hover {
     border-bottom-color: $crimson;
@@ -74,6 +79,10 @@
 
 .status-select__item {
   @include padding-hor(calc(6.25% - 1px));
+
+  @media (min-width: $min-tablet-width) {
+    @include padding-hor(9px);
+  }
 
   &:nth-last-child(n+2) {
     margin-bottom: 9px;
