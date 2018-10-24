@@ -1,3 +1,4 @@
+//TODO: оптимизация изображений
 //TODO: добавить состояния
 //TODO: добавить hotkeys для переключения цветов и для селекта
 
@@ -10,6 +11,10 @@
 .page__header {
   flex-shrink: 0;
   margin-bottom: 26px;
+
+  @media (min-width: $min-tablet-width) {
+    margin-bottom: 50px;
+  }
 }
 
 .page__main {

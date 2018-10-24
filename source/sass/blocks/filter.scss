@@ -1,5 +1,9 @@
 .filter__wrapper {
   @include padding-hor(calc(25% / 9));
+
+  @media (min-width: $min-tablet-width) {
+    @include padding-hor(10px);
+  }
 }
 
 .filter__form {
@@ -48,6 +52,48 @@
   &--button {
     width: calc(800% / 17);
   }
+
+  @media (min-width: $min-tablet-width) {
+    &--text--title {
+      width: calc(220% / 7);
+      margin-right: 20px;
+    }
+
+    &--text--year {
+      width: calc(220% / 7);
+      margin-right: 20px;
+    }
+
+    &--text--price {
+      order: 1;
+      width: calc(220% / 7);
+      margin-right: 0;
+    }
+
+    &--text--description {
+      order: 1;
+      width: 700px;
+    }
+
+    &--color {
+      order: 1;
+      width: calc(220% / 7);
+      margin-right: 20px;
+    }
+
+    &--status {
+      order: 1;
+      width: calc(220% / 7);
+      margin-top: 15px;
+      margin-right: 20px;
+    }
+
+    &--button {
+      order: 1;
+      width: calc(220% / 7);
+      margin-top: 15px;
+    }
+  }
 }
 
 .filter__label {
@@ -58,12 +104,27 @@
 
   &--text {
     margin-bottom: 4px;
-    padding-left: calc(50% / 17);
     visibility: hidden;
   }
 
   .filter__field:focus + &--text {
     visibility: visible;
+  }
+
+  &--text--title {
+    padding-left: calc(50% / 17);
+  }
+
+  &--text--price {
+    padding-left: 6.25%;
+  }
+
+  &--text--year {
+    padding-left: 6.25%;
+  }
+
+  &--text--description {
+    padding-left: calc(50% / 17);
   }
 
   &--color {
