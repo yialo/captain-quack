@@ -1,9 +1,5 @@
 .filter__wrapper {
-  @include padding-hor(calc(25% / 9));
-
-  @media (min-width: $min-tablet-width) {
-    @include padding-hor(0);
-  }
+  @include padding-hor;
 }
 
 .filter__form {

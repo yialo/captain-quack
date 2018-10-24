@@ -1,7 +1,29 @@
+.catalog__wrapper {
+  @media (min-width: $min-tablet-width) {
+    @include padding-hor;
+  }
+}
+
 .catalog__title {
   @media (max-width: $max-phone-width) {
     @include visually-hider;
   }
-  //TODO: удалить в будущем
-  display: none;
+
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 26px;
+  padding-left: 15px;
+
+  @include font(700, 20px, 20px);
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 3px;
+    height: 18px;
+    background-color: #8b9497;
+  }
 }

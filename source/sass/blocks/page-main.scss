@@ -1,7 +1,7 @@
 .page-main__intro {
   margin-bottom: 13px;
 
-  @include padding-hor(calc(25% / 9));
+  @include padding-hor;
 
   @media (min-width: $min-tablet-width) {
     margin-bottom: 39px;
@@ -18,4 +18,8 @@
 
 .page-main__filter {
   margin-bottom: 55px;
+
+  @media (min-width: $min-tablet-width) {
+    margin-bottom: 17px;
+  }
 }

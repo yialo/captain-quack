@@ -1,5 +1,11 @@
 .table {
   display: block;
+
+  @media (min-width: $min-tablet-width) {
+    display: table;
+    border-collapse: collapse;
+    width: 700px;
+  }
 }
 
 .table__group {
@@ -10,8 +16,18 @@
       @include visually-hider;
     }
 
-    //TODO: удалить в будущем
-    display: none;
+    @media (min-width: $min-tablet-width) {
+      display: table-header-group;
+      background-color: $crimson;
+    }
+  }
+
+  &--body {
+    background-color: #f5f6f6;
+
+    @media (min-width: $min-tablet-width) {
+      display: table-row-group;
+    }
   }
 }
 
@@ -23,23 +39,78 @@
     padding-top: 18px;
     padding-bottom: 18px;
 
-    @include padding-hor(calc(50% / 9));
-    background-color: #f5f6f6;
-    border-top: 1px solid #dcdcdc;
+    @include padding-hor(20px);
+    border-top: 1px solid rgba(152, 152, 152, 0.2);
+
+    @media (min-width: $min-tablet-width) {
+      display: table-row;
+      border-top-color: #e6e9ea;
+    }
+  }
+
+  &--body:first-child {
+    @media (min-width: $min-tablet-width) {
+      border-top-style: none;
+    }
   }
 }
 
 .table__cell {
-  flex-shrink: 0;
-  display: block;
   padding: 0;
 
-  @include font(300, 14px, 16px);
+  @media (min-width: $min-tablet-width) {
+    margin: 0;
+    vertical-align: top;
+  }
+
+  &--head {
+    @media (min-width: $min-tablet-width) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      @include font(500, 15px, 15px);
+      text-align: left;
+      color: white;
+    }
+  }
+
+  &--head--title {
+    @media (min-width: $min-tablet-width) {
+      padding-left: 15px;
+      border-top-left-radius: 4px;
+    }
+  }
+
+  &--head--action {
+    @media (min-width: $min-tablet-width) {
+      border-top-right-radius: 4px;
+    }
+  }
+
+  &--body {
+    flex-shrink: 0;
+    display: block;
+
+    @include font(300, 14px, 16px);
+
+    @media (min-width: $min-tablet-width) {
+      display: table-cell;
+
+      @include font(300, 15px, 15px);
+    }
+  }
 
   &--body--title {
     position: relative;
     width: 46.875%;
     margin-right: 6.25%;
+
+    @media (min-width: $min-tablet-width) {
+      width: 281px;
+      padding-top: 18px;
+      padding-bottom: 15px;
+      padding-left: 16px;
+    }
   }
 
   &--body--title--item-1 {
@@ -71,6 +142,11 @@
     width: 10%;
     margin-top: 7px;
     margin-right: 6.25%;
+
+    @media (min-width: $min-tablet-width) {
+      width: 45px;
+      padding-top: 18px;
+    }
   }
 
   &--body--color {
@@ -78,13 +154,24 @@
     justify-content: flex-end;
     width: 12.5%;
     padding-right: 11px;
+
+    @media (min-width: $min-tablet-width) {
+      display: table-cell;
+      width: 50px;
+      padding-top: 15px;
+      padding-left: 7px;
+    }
   }
 
   &--body--status {
     order: 1;
-    width: 59.375%;
     margin-top: 7px;
     margin-right: auto;
+
+    @media (min-width: $min-tablet-width) {
+      width: 113px;
+      padding-top: 18px;
+    }
   }
 
   &--body--price {
@@ -93,10 +180,29 @@
     margin-bottom: 15px;
     padding-right: 10px;
     text-align: right;
+
+    @media (min-width: $min-tablet-width) {
+      width: 121px;
+      padding-top: 18px;
+      text-align: left;
+    }
   }
 
   &--body--action {
     order: 1;
+
+    @media (min-width: $min-tablet-width) {
+      width: 90px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  &--body--action--last {
+    @media (min-width: $min-tablet-width) {
+      border-bottom-right-radius: 4px;
+    }
   }
 }
 
@@ -104,12 +210,34 @@
   margin-top: 0;
   margin-bottom: 0;
 
+  @media (min-width: $min-tablet-width) {
+    width: 260px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   &--item-1 {
     padding-right: 30px;
+
+    @media (min-width: $min-tablet-width) {
+      margin-bottom: 6px;
+      padding-right: 0;
+    }
   }
 
   &--item-5 {
     padding-right: 10px;
+
+    @media (min-width: $min-tablet-width) {
+      padding-right: 0;
+    }
+  }
+
+  &--item-6 {
+    @media (min-width: $min-tablet-width) {
+      margin-bottom: 6px;
+    }
   }
 }
 
@@ -125,4 +253,9 @@
 
   @include font(300, 13px, 15px);
   color: #8b9497;
+
+  @media (min-width: $min-tablet-width) {
+    position: static;
+    width: 260px;
+  }
 }

@@ -19,12 +19,24 @@
 
   &--table {
     padding-top: 6px;
-    padding-bottom: 7px;
+    padding-bottom: 8px;
 
-    @include padding-hor(calc(250% / 18));
+    @include padding-hor(10px);
     color: white;
     background-color: $gray-dark-text;
     border-radius: 16px;
+
+    @media (min-width: $min-tablet-width) {
+      color: #8b9497;
+      background-color: transparent;
+    }
+  }
+
+  &--table:hover {
+    @media (min-width: $min-tablet-width) {
+      color: white;
+      background-color: $gray-dark-text;
+    }
   }
 }
 
