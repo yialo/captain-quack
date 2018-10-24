@@ -4,11 +4,15 @@
   @include list;
 }
 
-.palette__item:nth-last-child(n+2) {
-  margin-right: calc(120% / 17);
+.palette__item {
+  &:nth-last-child(n+2) {
+    margin-right: calc(120% / 17);
+  }
 
   @media (min-width: $min-tablet-width) {
-    margin-right: calc(250% / 22);
+    &:nth-last-child(n+2) {
+      margin-right: calc(250% / 22);
+    }
   }
 }
 

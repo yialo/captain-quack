@@ -28,35 +28,35 @@
     border-bottom-style: none;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-
-    @media (min-width: $min-tablet-width) {
-      right: calc(70% / 11);
-    }
   }
 
   @media (min-width: $min-tablet-width) {
     padding-left: calc(50% / 11 - 1px);
     padding-right: calc(190% / 11 - 1px);
-  }
 
-  &:hover {
-    border-bottom-color: $crimson;
-  }
+    &::after {
+      right: calc(70% / 11);
+    }
 
-  &:focus {
-    border-bottom-color: $crimson;
-  }
+    &:hover {
+      border-bottom-color: $crimson;
+    }
 
-  &--js--opened {
-    border-bottom-color: black;
-  }
+    &:focus {
+      border-bottom-color: $crimson;
+    }
 
-  &--js--opened:hover {
-    border-bottom-color: black;
-  }
+    &--js--opened {
+      border-bottom-color: black;
+    }
 
-  &--js--opened:focus {
-    border-bottom-color: black;
+    &--js--opened:hover {
+      border-bottom-color: black;
+    }
+
+    &--js--opened:focus {
+      border-bottom-color: black;
+    }
   }
 }
 
@@ -85,12 +85,12 @@
 .status-select__item {
   @include padding-hor(calc(6.25% - 1px));
 
-  @media (min-width: $min-tablet-width) {
-    @include padding-hor(calc(50% / 11 - 1px));
-  }
-
   &:nth-last-child(n+2) {
     margin-bottom: 9px;
+  }
+
+  @media (min-width: $min-tablet-width) {
+    @include padding-hor(calc(50% / 11 - 1px));
   }
 }
 

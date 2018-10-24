@@ -9,21 +9,23 @@
     @include visually-hider;
   }
 
-  position: relative;
-  margin-top: 0;
-  margin-bottom: 26px;
+  @media (min-width: $min-tablet-width) {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 26px;
 
-  @include padding-hor(calc(15% / 7));
-  @include font(700, 20px, 20px);
-  text-transform: uppercase;
+    @include padding-hor(calc(15% / 7));
+    @include font(700, 20px, 20px);
+    text-transform: uppercase;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 1px;
-    left: 0;
-    width: 3px;
-    height: 18px;
-    background-color: #8b9497;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1px;
+      left: 0;
+      width: 3px;
+      height: 18px;
+      background-color: #8b9497;
+    }
   }
 }

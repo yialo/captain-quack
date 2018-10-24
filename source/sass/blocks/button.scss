@@ -26,15 +26,15 @@
     color: white;
     background-color: $gray-dark-text;
     border-radius: 16px;
+  }
 
-    @media (min-width: $min-tablet-width) {
+  @media (min-width: $min-tablet-width) {
+    &--table {
       color: #8b9497;
       background-color: transparent;
     }
-  }
 
-  &--table:hover {
-    @media (min-width: $min-tablet-width) {
+    &--table:hover {
       color: white;
       background-color: $gray-dark-text;
     }
