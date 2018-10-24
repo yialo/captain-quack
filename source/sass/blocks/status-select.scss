@@ -30,13 +30,13 @@
     border-right: 6px solid transparent;
 
     @media (min-width: $min-tablet-width) {
-      right: 14px;
+      right: calc(70% / 11);
     }
   }
 
   @media (min-width: $min-tablet-width) {
-    padding-left: 9px;
-    padding-right: 38px;
+    padding-left: calc(50% / 11 - 1px);
+    padding-right: calc(190% / 11 - 1px);
   }
 
   &:hover {
@@ -86,7 +86,7 @@
   @include padding-hor(calc(6.25% - 1px));
 
   @media (min-width: $min-tablet-width) {
-    @include padding-hor(9px);
+    @include padding-hor(calc(50% / 11 - 1px));
   }
 
   &:nth-last-child(n+2) {

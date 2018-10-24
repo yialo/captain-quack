@@ -12,8 +12,8 @@
   position: relative;
   margin-top: 0;
   margin-bottom: 26px;
-  padding-left: 15px;
 
+  @include padding-hor(calc(15% / 7));
   @include font(700, 20px, 20px);
   text-transform: uppercase;
 

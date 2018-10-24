@@ -20,7 +20,7 @@
 
     @media (min-width: $min-tablet-width) {
       width: calc(220% / 7);
-      margin-right: 20px;
+      margin-right: calc(20% / 7);
     }
   }
 
@@ -42,7 +42,7 @@
 
     @media (min-width: $min-tablet-width) {
       width: calc(220% / 7);
-      margin-right: 20px;
+      margin-right: calc(20% / 7);
     }
   }
 
@@ -52,7 +52,6 @@
 
     @media (min-width: $min-tablet-width) {
       order: 1;
-      width: 700px;
     }
   }
 
@@ -63,7 +62,7 @@
     @media (min-width: $min-tablet-width) {
       order: 1;
       width: calc(220% / 7);
-      margin-right: 20px;
+      margin-right: calc(20% / 7);
     }
   }
 
@@ -75,7 +74,7 @@
       order: 1;
       width: calc(220% / 7);
       margin-top: 15px;
-      margin-right: 20px;
+      margin-right: calc(20% / 7);
     }
   }
 
@@ -109,7 +108,7 @@
     padding-left: calc(50% / 17);
 
     @media (min-width: $min-tablet-width) {
-      padding-left: 10px;
+      padding-left: calc(50% / 11);
     }
   }
 
@@ -117,7 +116,7 @@
     padding-left: 6.25%;
 
     @media (min-width: $min-tablet-width) {
-      padding-left: 10px;
+      padding-left: calc(50% / 11);
     }
   }
 
@@ -125,7 +124,7 @@
     padding-left: 6.25%;
 
     @media (min-width: $min-tablet-width) {
-      padding-left: 10px;
+      padding-left: calc(50% / 11);
     }
   }
 
@@ -133,7 +132,7 @@
     padding-left: calc(50% / 17);
 
     @media (min-width: $min-tablet-width) {
-      padding-left: 10px;
+      padding-left: calc(10% / 7);
     }
   }
 
@@ -176,7 +175,7 @@
     @include padding-hor(calc(50% / 17 - 1px));
 
     @media (min-width: $min-tablet-width) {
-      @include padding-hor(9px);
+      @include padding-hor(calc(50% / 11 - 1px));
     }
   }
 
@@ -184,7 +183,7 @@
     @include padding-hor(calc(6.25% - 1px));
 
     @media (min-width: $min-tablet-width) {
-      @include padding-hor(9px);
+      @include padding-hor(calc(50% / 11 - 1px));
     }
   }
 
@@ -192,7 +191,7 @@
     @include padding-hor(calc(6.25% - 1px));
 
     @media (min-width: $min-tablet-width) {
-      @include padding-hor(9px);
+      @include padding-hor(calc(50% / 11 - 1px));
     }
   }
 
@@ -200,7 +199,7 @@
     @include padding-hor(calc(50% / 17 - 1px));
 
     @media (min-width: $min-tablet-width) {
-      @include padding-hor(9px);
+      @include padding-hor(calc(10% / 7 - 1px));
     }
   }
 }

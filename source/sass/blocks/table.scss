@@ -4,7 +4,7 @@
   @media (min-width: $min-tablet-width) {
     display: table;
     border-collapse: collapse;
-    width: 700px;
+    width: 100%;
   }
 }
 
@@ -76,7 +76,7 @@
 
   &--head--title {
     @media (min-width: $min-tablet-width) {
-      padding-left: 15px;
+      padding-left: calc(15% / 7);
       border-top-left-radius: 4px;
     }
   }
@@ -106,10 +106,10 @@
     margin-right: 6.25%;
 
     @media (min-width: $min-tablet-width) {
-      width: 281px;
+      width: calc(281% / 7);
       padding-top: 18px;
       padding-bottom: 15px;
-      padding-left: 16px;
+      padding-left: calc(15% / 7);
     }
   }
 
@@ -144,7 +144,7 @@
     margin-right: 6.25%;
 
     @media (min-width: $min-tablet-width) {
-      width: 45px;
+      width: calc(45% / 7);
       padding-top: 18px;
     }
   }
@@ -157,7 +157,7 @@
 
     @media (min-width: $min-tablet-width) {
       display: table-cell;
-      width: 50px;
+      width: calc(50% / 7);
       padding-top: 15px;
       padding-left: 7px;
     }
@@ -169,7 +169,7 @@
     margin-right: auto;
 
     @media (min-width: $min-tablet-width) {
-      width: 113px;
+      width: calc(113% / 7);
       padding-top: 18px;
     }
   }
@@ -182,7 +182,7 @@
     text-align: right;
 
     @media (min-width: $min-tablet-width) {
-      width: 121px;
+      width: calc(121% / 7);
       padding-top: 18px;
       text-align: left;
     }
@@ -192,10 +192,10 @@
     order: 1;
 
     @media (min-width: $min-tablet-width) {
-      width: 90px;
+      width: calc(90% / 7);
       padding-top: 10px;
       padding-bottom: 10px;
-      padding-right: 10px;
+      padding-right: calc(10% / 7);
     }
   }
 
@@ -211,7 +211,7 @@
   margin-bottom: 0;
 
   @media (min-width: $min-tablet-width) {
-    width: 260px;
+    width: calc(6500% / 67);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -245,7 +245,7 @@
   position: absolute;
   top: calc(100% + 15px);
   left: 0;
-  width: 320px;
+  width: calc(640% / 3);
   max-height: 32px;
   overflow: hidden;
   margin-top: 0;
@@ -256,6 +256,6 @@
 
   @media (min-width: $min-tablet-width) {
     position: static;
-    width: 260px;
+    width: calc(6500% / 67);
   }
 }
