@@ -9,7 +9,7 @@
     padding-top: 2px;
     padding-bottom: 2px;
 
-    @include padding-hor(6.25%);
+    @include padding-hor;
     @include font(700, 16px, 36px);
     text-transform: uppercase;
     color: white;
@@ -21,7 +21,7 @@
     padding-top: 6px;
     padding-bottom: 8px;
 
-    @include padding-hor(10px);
+    @include padding-hor;
     text-align: center;
     color: white;
     background-color: $gray-dark-text;
@@ -54,5 +54,9 @@
     margin-left: 10px;
     background-image: url("../img/arrow-right.svg");
     background-size: 8px 12px;
+  }
+
+  @media (min-width: $min-desktop-width) {
+    transform: translateX(0);
   }
 }

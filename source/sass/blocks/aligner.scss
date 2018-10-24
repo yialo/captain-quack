@@ -3,7 +3,5 @@
 
   @media (min-width: $min-desktop-width) {
     width: $min-desktop-width;
-
-    @include outline;
   }
 }

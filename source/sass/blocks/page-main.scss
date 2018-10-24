@@ -22,4 +22,8 @@
   @media (min-width: $min-tablet-width) {
     margin-bottom: 17px;
   }
+
+  @media (min-width: $min-desktop-width) {
+    margin-bottom: 136px;
+  }
 }

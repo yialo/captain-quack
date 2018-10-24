@@ -6,13 +6,7 @@
 
 .palette__item {
   &:nth-last-child(n+2) {
-    margin-right: calc(120% / 17);
-  }
-
-  @media (min-width: $min-tablet-width) {
-    &:nth-last-child(n+2) {
-      margin-right: calc(250% / 22);
-    }
+    margin-right: 24px;
   }
 }
 

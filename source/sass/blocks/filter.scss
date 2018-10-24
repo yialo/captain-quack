@@ -20,13 +20,13 @@
   }
 
   &--text--price {
-    width: calc(800% / 17);
-    margin-right: calc(100% / 17);
+    flex-grow: 1;
+    margin-right: 20px;
     margin-bottom: 8px;
   }
 
   &--text--year {
-    width: calc(800% / 17);
+    flex-grow: 1;
     margin-bottom: 8px;
   }
 
@@ -41,29 +41,29 @@
   }
 
   &--status {
-    width: calc(800% / 17);
-    margin-right: calc(100% / 17);
+    flex-grow: 1;
+    margin-right: 20px;
   }
 
   &--button {
-    width: calc(800% / 17);
+    flex-grow: 1;
   }
 
   @media (min-width: $min-tablet-width) {
     &--text--title {
-      width: calc(220% / 7);
-      margin-right: calc(20% / 7);
+      width: calc((100% - 40px) / 3);
+      margin-right: 20px;
     }
 
     &--text--price {
       order: 1;
-      width: calc(220% / 7);
+      width: calc((100% - 40px) / 3);
       margin-right: 0;
     }
 
     &--text--year {
-      width: calc(220% / 7);
-      margin-right: calc(20% / 7);
+      width: calc((100% - 40px) / 3);
+      margin-right: 20px;
     }
 
     &--text--description {
@@ -72,20 +72,20 @@
 
     &--color {
       order: 1;
-      width: calc(220% / 7);
-      margin-right: calc(20% / 7);
+      width: calc((100% - 40px) / 3);
+      margin-right: 20px;
     }
 
     &--status {
       order: 1;
-      width: calc(220% / 7);
+      width: calc((100% - 40px) / 3);
       margin-top: 15px;
-      margin-right: calc(20% / 7);
+      margin-right: 20px;
     }
 
     &--button {
       order: 1;
-      width: calc(220% / 7);
+      width: calc((100% - 40px) / 3);
       margin-top: 15px;
     }
   }
@@ -99,6 +99,7 @@
 
   &--text {
     margin-bottom: 4px;
+    padding-left: 10px;
     visibility: hidden;
   }
 
@@ -106,42 +107,8 @@
     visibility: visible;
   }
 
-  &--text--title {
-    padding-left: calc(50% / 17);
-  }
-
-  &--text--price {
-    padding-left: 6.25%;
-  }
-
-  &--text--year {
-    padding-left: 6.25%;
-  }
-
-  &--text--description {
-    padding-left: calc(50% / 17);
-  }
-
   &--color {
     margin-bottom: 7px;
-  }
-
-  @media (min-width: $min-tablet-width) {
-    &--text--title {
-      padding-left: calc(50% / 11);
-    }
-
-    &--text--price {
-      padding-left: calc(50% / 11);
-    }
-
-    &--text--year {
-      padding-left: calc(50% / 11);
-    }
-
-    &--text--description {
-      padding-left: calc(10% / 7);
-    }
   }
 }
 
@@ -152,6 +119,7 @@
   padding-top: 10px;
   padding-bottom: 9px;
 
+  @include padding-hor(9px);
   @include font(400, 12px, 18px);
   color: #111111;
   border: 1px solid #dcdcdc;
@@ -173,40 +141,6 @@
 
   &:focus::placeholder {
     visibility: hidden;
-  }
-
-  &--title {
-    @include padding-hor(calc(50% / 17 - 1px));
-  }
-
-  &--price {
-    @include padding-hor(calc(6.25% - 1px));
-  }
-
-  &--year {
-    @include padding-hor(calc(6.25% - 1px));
-  }
-
-  &--description {
-    @include padding-hor(calc(50% / 17 - 1px));
-  }
-
-  @media (min-width: $min-tablet-width) {
-    &--title {
-      @include padding-hor(calc(50% / 11 - 1px));
-    }
-
-    &--price {
-      @include padding-hor(calc(50% / 11 - 1px));
-    }
-
-    &--year {
-      @include padding-hor(calc(50% / 11 - 1px));
-    }
-
-    &--description {
-      @include padding-hor(calc(10% / 7 - 1px));
-    }
   }
 }
 
